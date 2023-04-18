@@ -1,0 +1,38 @@
+.wrapper{
+    background-color: white;
+    display: flex;
+    .imgBox{
+        display: flex;
+        padding: 30px;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        .preImg{
+            width: 400px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .header{
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+            Button{
+                margin-top: 20px;
+            }
+        } 
+        .lastImg{
+            width: 400px;
+            margin-left: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .header{
+                margin-bottom: 20px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }  
+    }
+}
