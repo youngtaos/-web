@@ -2,14 +2,17 @@ import video from "../../../../assets/v1.mp4";
 import { UploadOutlined } from "@ant-design/icons";
 import { Button, Upload } from "antd";
 import styles from "./styles.module.scss";
+import { useState } from "react";
 
 const Video = () => {
+  const [isShow, setIsShow] = useState(false);
   const props = {
-    action: "https://www.mocky.io/v2/5cc8019d300000980a055e76",
+    action: "https://www.mocky.io/",
     onChange({ file, fileList }) {
       setTimeout(() => {
         file.status == "done";
-      }, 200);
+        setIsShow(true);
+      }, 2000);
       if (file.status !== "uploading") {
         console.log(file, fileList);
       }
@@ -47,7 +50,9 @@ const Video = () => {
           <Button icon={<UploadOutlined />}>Upload</Button>
         </Upload>
         <div className={styles.video}>
-          <video src={video} controls></video>
+          <div style={{ display: `${isShow ? "block" : "none"}` }}>
+            <video src={video} controls></video>
+          </div>
         </div>
       </div>
     </div>

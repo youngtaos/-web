@@ -11,6 +11,9 @@ const SideMenu = ({ selectedKeys }) => {
       <Menu.Item key={2}>
         <NavLink to="/home/user">视频检测</NavLink>
       </Menu.Item>
+      <Menu.Item key={3}>
+        <NavLink to="/home/chart">训练数据</NavLink>
+      </Menu.Item>
     </Menu>
   );
 };

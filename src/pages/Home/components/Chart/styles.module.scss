@@ -1,0 +1,12 @@
+.wrapper{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    .imgBox{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 30px;
+    }
+}
